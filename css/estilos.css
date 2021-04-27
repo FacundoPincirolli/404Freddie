@@ -1,4 +1,5 @@
 
+
 *{
     margin: 0%;
     padding: 0%;
@@ -8,8 +9,16 @@
 
 html{
 
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Raleway', sans-serif;
+}
+
+.contenedor{
+    width: 1200px;
+    overflow: hidden;
+    height: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes rectimp{
@@ -51,11 +60,22 @@ html{
     }
 }
 
+@keyframes busca{
+    0%{
+        opacity: 0%;
+    }
+
+    100%{
+        opacity: 100%;
+    }
+}
+
 
 .rectangulo1{
     background-color: #2A2A62;
+    position: relative;
     width: 16.8%;
-    height: 850px;
+    height: 500px;
     float: right;
     animation-name: rectimp;
     animation-duration: 3s;
@@ -65,7 +85,7 @@ html{
 .rectangulo2{
     background-color: #E61972;
     width: 16.6%;
-    height: 850px;
+    height: 500px;
     float: right;
     animation-name: rectpar;
     animation-duration: 4.5s;
@@ -74,7 +94,7 @@ html{
 .rectangulo3{
     background-color: #E4141A;
     width: 16.6%;
-    height: 850px;
+    height: 500px;
     float: right;
     animation-name: rectimp;
     animation-duration: 5s;
@@ -83,7 +103,7 @@ html{
 .rectangulo4{
     background-color: #F3E725;
     width: 16.6%;
-    height: 850px;
+    height: 500px;
     float: right;
     animation-name: rectpar;
     animation-duration: 6.5s;
@@ -92,7 +112,7 @@ html{
 .rectangulo5{
     background-color: #33BDE7;
     width: 16.8%;
-    height: 850px;
+    height: 500px;
     float: right;
     animation-name: rectimp;
     animation-duration: 7s;
@@ -101,7 +121,7 @@ html{
 .rectangulo6{
     background-color: #159C39;
     width: 16.6%;
-    height: 850px;
+    height: 500px;
     float: left;
     animation-name: rectpar;
     animation-duration: 8s;
@@ -153,14 +173,22 @@ html{
     animation-name: cara;
     animation-duration: 8s;
     animation-direction: reverse;
-    
+    width: 50%;
+}
+
+.caraf{
+    margin-top: 50%;
+    margin-left: 20%;
+    animation-name: cara;
+    animation-duration: 8s;
+    animation-direction: reverse;
+    width: 40%;
 }
 
 .texto{
-    
-    position: absolute;
-    top: 30%;
-    right: 5%;
+    position: relative;
+    bottom: 46%;
+    left: 70%;
     color: azure;
     animation-name: cara;
     animation-duration: 6s;
@@ -168,21 +196,54 @@ html{
 
 }
 
-.error{
-    position: absolute;
-    top: 40%;
-    right: 13%;
+.numerror{
+    position: relative;
+    left: 70%;
+    bottom: 44%;
     color: azure;
-    font-size: 150px;
+    font-size: 120px;
+    animation-name: error;
+    animation-duration: 8s;
+    
+}
+
+.txterror{
+    position: relative;
+    left: 70%;
+    bottom: 40%;
+    color: azure;
+    font-size: 25px;
     animation-name: error;
     animation-duration: 8s;
 }
 
 .pie{
-    position: absolute;
-    bottom: 4%;
-    left: 3%;
+    position: relative;
+    bottom: 25%;
+    left: 5%;
     color: azure;
     font-family: 'Libre Barcode 128 Text', cursive;
     font-size: 25px;
+    animation-name: busca;
+    animation-duration: 15s;
+}
+
+.buscador{
+    transition: 0.5 all 0s ease;
+    position: relative;
+    left: 70%;    
+    bottom: 45%;
+    color: white;
+    border-color: cadetblue;
+    border: cyan;
+    width: 13%;
+    font-size: 17px;
+    animation-name: busca;
+    animation-duration: 12s;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.buscador:hover{
+    transform: scale(1,1.2);
 }
